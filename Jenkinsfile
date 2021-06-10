@@ -1,3 +1,8 @@
+pipeline {
+    agent { label 'docker' }
+    environment = "$PATH:/usr/local/bin"
+}
+
 node {
     def app
 
