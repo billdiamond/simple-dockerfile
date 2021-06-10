@@ -10,6 +10,9 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
+        
+        environment {
+            PATH = "${PATH}:/usr/local/bin"
 
         app = docker.build("billdi/simple-dockerfile")
     }
